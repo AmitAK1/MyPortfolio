@@ -119,6 +119,16 @@ export default function Projects() {
               </div>
 
               <div className="flex shrink-0 flex-wrap gap-3 lg:flex-col lg:items-end">
+                {spotlightProject.live ? (
+                  <a
+                    href={spotlightProject.live}
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-secondary px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Demo ↗
+                  </a>
+                ) : null}
                 <a
                   href={spotlightProject.github}
                   className="inline-flex items-center gap-2 rounded-full border border-border/70 px-4 py-2 text-sm font-semibold text-foreground/80 transition hover:border-accent/40 hover:text-foreground"
